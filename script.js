@@ -120,8 +120,27 @@ function Player(alturaDivJogo, personagem) {
 	window.onmousedown = e => voando = true;
 	window.onmouseup = e => voando = false;
 
-	window.ontouchstart = e => voando = true;
-	window.ontouchend = e => voando = false;
+	// window.ontouchstart = e => voando = true;
+	// window.ontouchend = e => voando = false;
+	
+	// verifica se o toque na tela é na área de jogo ou nos drowpdowns
+	let isTouchInsideDropdown = false;
+
+	window.ontouchstart = function(e) {
+	  if (e.target.closest('#selecionar-personagem, #selecionar-dificuldade, #selecionar-periodo')) {
+	    isTouchInsideDropdown = true;
+	  } else {
+	    voando = true;
+	  }
+	};
+
+	window.ontouchend = function(e) {
+	  if (!isTouchInsideDropdown) {
+	    voando = false;
+	  }
+
+	  isTouchInsideDropdown = false;
+	};
 
 	this.animarPlayer = () => {
 		const novaAltura = this.getAltura() + (voando ? 8 : -5);
@@ -280,6 +299,33 @@ buttonJogar.addEventListener('touchstart', function(){
 	newJogo.start();
 	
 })
+
+// Pegando os valores do dropdown no celular
+document.addEventListener('DOMContentLoaded', function() {
+  const personagemDropdown = document.querySelector('#selecionar-personagem');
+  const dificuldadeDropdown = document.querySelector('#selecionar-dificuldade');
+  const periodoDropdown = document.querySelector('#selecionar-periodo');
+
+  // Get the selected values from the dropdown menus
+  let personagemEscolhido = '';
+  let dificuldadeEscolhida = '';
+  let periodoEscolhido = '';
+
+  personagemDropdown.addEventListener('change', function() {
+    personagemEscolhido = this.value;
+    console.log('Personagem escolhido:', personagemEscolhido);
+  });
+
+  dificuldadeDropdown.addEventListener('change', function() {
+    dificuldadeEscolhida = this.value;
+    console.log('Dificuldade escolhida:', dificuldadeEscolhida);
+  });
+
+  periodoDropdown.addEventListener('change', function() {
+    periodoEscolhido = this.value;
+    console.log('Período escolhido:', periodoEscolhido);
+  });
+});
 
 
 
