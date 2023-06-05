@@ -257,7 +257,7 @@ buttonJogar.onclick = function() {
 	
 }
 
-buttonJogar.ontouch = function() {
+buttonJogar.addEventListener('touchstart', function(){
 	// console.log(jogo.divJogo.children)
 
 	if (jogo.divJogo.hasChildNodes()){
@@ -279,7 +279,7 @@ buttonJogar.ontouch = function() {
 	const newJogo = new jogarFlappyBird();
 	newJogo.start();
 	
-}
+})
 
 
 
