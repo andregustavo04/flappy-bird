@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+@font-face{
+    font-family: 'Pixel';
+    src: url('../fonts/Pixel.ttf');
+}
+
+[ag-flappy]{
+    margin: 35px;
+    position: relative;
+    border: 5px solid dodgerblue;
+    height: 97%;
+    width:  90%;
+    background-color: deepskyblue;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.noite{
+    margin: 35px;
+    position: relative;
+    border: 5px solid #26334D;
+    height: 97%;
+    width:  90%;
+    background-color: #1E3567;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.player{
+    position: absolute;
+    width: 60px;
+    left: calc(50% - 30px);
+}
+
+.par-de-barreiras{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barreira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barreira .borda {
+    height: 30px;
+    width: 110px;
+    background: linear-gradient(90deg, #639301, #A5E83E);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.barreira .corpo {
+    height: 130px;
+    width: 90px;
+    background: linear-gradient(90deg, #639301, #A5E83E);
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.game-over{
+    position: absolute;
+    display: none;
+    z-index: 100;
+    width: 800px;
+    height: 200px;
+    margin: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.progresso{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 80px;
+    font-family: Pixel;
+    z-index: 1000;
+}
+
+@media (max-width: 992px){
+    [ag-flappy]{
+        margin: 0;
+        height: 400px;
+        width:  100%;
+        padding: 0;
+    }
+    .game-over{
+        width: 280px;
+        height: 100px;
+    }
+    .player{
+        position: absolute;
+        width: 60px;
+        left: 45%;
+    }    
+    
+    
+}
+
+@media (max-width: 370px){
+    [ag-flappy]{
+        margin: 0;
+        height: 80%;
+        width:  100%;
+        padding: 0;
+    }
+
+    .game-over{
+        width: 280px;
+    }
+}

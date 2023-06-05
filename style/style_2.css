@@ -1,0 +1,63 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #0D262D;
+    color: #fff;
+    height: 100%;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+h2{
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+#button-jogar{
+    margin: 15px;
+    display: none;
+    background-color: #3B535B;
+    color: #fff;
+    width: 120px;
+    height: 60px;
+    border: 1px solid white;
+    align-items: center;
+    font-size:16px;
+
+}
+
+.material-symbols-outlined{
+    color: white;
+    margin-left: 5px;
+}
+
+#opcoes{
+    margin: 10px;
+    margin-top: 15px;   
+}
+
+
+.div-selection{
+    margin: 10px;
+}
+
+.selection{
+    background-color: #3B535B;
+    color: #fff;
+    text-align: center;
+    border: 1px solid white;
+}

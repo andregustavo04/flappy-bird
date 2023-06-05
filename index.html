@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/style_2.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+	<link rel="icon" type="image/x-icon" href="imgs/favicon.png">
+	<title>Flappy Bird</title>
+</head>
+<body>
+	<body class="conteudo">
+		
+		<h2>Flappy Bird</h2>
+		<button id="button-jogar">Restart<span class="material-symbols-outlined" id="restart-icon">refresh</span></button>
+		<div ag-flappy>
+			<img src="" class="game-over">
+		</div>
+		<div id="opcoes">
+			<form>
+				<div id="personagem" class="div-selection">
+					<label for="selecionar-personagem">Selecione um personagem:</label>
+					<select id="selecionar-personagem" name="personagem-escolhido" class="selection">
+						<option value="tradicional">Tradicional</option>
+						<option value="galinha">Galinha</option>
+						<option value="duck">Pato</option>
+						<option value="twitter">Twitter</option>
+						<option value="pacman">Pacman</option>
+						<option value="aviao">Avião</option>
+						<option value="aviao_do_amor">Avião do Amor</option>
+						<option value="papel_higienico">Papel Higiênico</option>
+					</select>
+				</div>
+				<div id="dificuldade" class="div-selection">
+					<label for="selecionar-dificuldade">Dificuldade:</label>
+					<select id="selecionar-dificuldade" name="dificuldade-escolhida" class="selection">
+						<option value="facil">Fácil</option>
+						<option value="medio">Médio</option>
+						<option value="dificil">Difícil</option>
+						<option value="hardcore">Hardcore</option>
+						<option value="impossivel">Impossível</option>
+					</select>
+				</div>
+				<div id="periodo" class="div-selection">
+					<label for="selecionar-periodo">Período:</label>
+					<select id="selecionar-periodo" name="periodo-escolhido" class="selection" onchange="mudarPeriodo()">
+						<option value="dia">Dia</option>
+						<option value="noite">Noite</option>
+					</select>
+				</div>
+			</form>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
