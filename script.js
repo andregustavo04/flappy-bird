@@ -257,6 +257,30 @@ buttonJogar.onclick = function() {
 	
 }
 
+buttonJogar.ontouch = function() {
+	// console.log(jogo.divJogo.children)
+
+	if (jogo.divJogo.hasChildNodes()){
+		// console.log(jogo.divJogo.children)
+		listaDeElmentos = Array.from(jogo.divJogo.children);
+		for (let elemento of listaDeElmentos){
+			if (elemento.className === "game-over"){
+				elemento.style.display = "none";
+				console.log("Deu certo");	
+			}else{
+				elemento.remove()
+			}
+			
+		}
+		// const answer = jogo.divJogo.hasChildNodes();
+		// console.log(answer)
+}
+	buttonJogar.style.display = "none";
+	const newJogo = new jogarFlappyBird();
+	newJogo.start();
+	
+}
+
 
 
 
