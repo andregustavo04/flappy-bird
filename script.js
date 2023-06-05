@@ -120,7 +120,7 @@ function Player(alturaDivJogo, personagem) {
 	window.onmousedown = e => voando = true;
 	window.onmouseup = e => voando = false;
 
-	window.ontocuhstart = e => voando = true;
+	window.ontouchstart = e => voando = true;
 	window.ontouchend = e => voando = false;
 
 	this.animarPlayer = () => {
